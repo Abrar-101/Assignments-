@@ -1,0 +1,17 @@
+#Assignment 2
+n = int(input("Enter size of square matrix: "))
+print("Enter elements row-wise:")
+A = []
+for i in range(n):
+    row = list(map(int, input().split()))
+     A.append(row)
+symmetric = True
+for i in range(n):
+     for j in range(n):
+        if A[i][j] != A[j][i]:
+             symmetric=False
+            break
+if symmetric:
+    print("Matrix is Symmetric.")
+else:
+    print("Matrix is NOT Symmetric.")
