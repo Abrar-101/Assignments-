@@ -1,0 +1,35 @@
+#Assignment 1A
+rows = int(input("Enter number of rows: "))
+cols = int(input("Enter number of columns: "))
+
+print("Enter elements row-wise:")
+A = []
+for i in range(rows):
+    row = list(map(int, input().split()))
+    A.append(row)
+T = []
+for c in range(cols):
+    temp = []
+    for r in range(rows):
+        temp.append(A[r][c])
+    T.append(temp)
+
+print("Transpose of the matrix:")
+for x in T:
+    print(x)
+
+#Assignment 1B
+n = int(input("Enter size of square matrix: "))
+print("Enter elements row-wise:")
+A = []
+for i in range(n):
+    row = list(map(int, input().split()))
+    A.append(row)
+for i in range(n):
+    for j in range(i + 1, n):
+        temp = A[i][j]
+        A[i][j] = A[j][i]
+        A[j][i] = temp
+print("Transpose of the matrix:")
+for r in A:
+    print(r)
